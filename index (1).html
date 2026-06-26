@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Save Our Wildlife — a conservation campaign promoting the protection of endangered animals and their natural habitats." />
+  <title>Save Our Wildlife</title>
+
+  <!-- Linked stylesheet (separation of content) -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Skip navigation link for keyboard/screen-reader users -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header role="banner">
+    <p class="site-badge" aria-label="Organisation type">Conservation Campaign</p>
+    <h1>Save Our <span>Wildlife</span></h1>
+    <p class="tagline">Every species lost is a story we can never tell again.</p>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main id="main-content">
+
+    <!-- Video section -->
+    <section class="video-section" aria-labelledby="video-heading">
+      <h2 id="video-heading" class="sr-only">Wildlife campaign video</h2>
+
+      <!-- Video wrapper — toggled by JS -->
+      <div id="videoWrapper" class="video-wrapper" aria-live="polite">
+        <video
+          id="wildlifeVideo"
+          src="wildlife.mp4"
+          controls
+          preload="metadata"
+          aria-label="Wildlife conservation promotional video"
+          poster=""
+        >
+          <!-- Fallback for browsers that do not support the video element -->
+          <p>
+            Your browser does not support HTML5 video.
+            <a href="wildlife.mp4">Download the video</a> to watch it.
+          </p>
+        </video>
+      </div>
+
+      <!-- Video controls bar -->
+      <div class="controls" role="group" aria-label="Video controls">
+        <button
+          id="toggleBtn"
+          type="button"
+          aria-label="Play the wildlife video"
+          aria-pressed="false"
+        >
+          <span id="btnIcon" class="btn-icon" aria-hidden="true">▶</span>
+          <span id="btnLabel">Play video</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Description below the video -->
+    <section class="description-card" aria-labelledby="desc-heading">
+      <h2 id="desc-heading">About this campaign</h2>
+      <p>
+        Across the globe, thousands of species face extinction due to habitat
+        destruction, poaching, and climate change. This campaign shines a light
+        on the urgent need to protect our planet's most vulnerable wildlife — from
+        the majestic elephant to the elusive snow leopard. Together, we can act
+        before it is too late.
+      </p>
+    </section>
+
+    <!-- Call to action -->
+    <aside class="cta-strip" aria-label="Call to action">
+      <p>
+        Want to make a difference?
+        <a href="https://www.worldwildlife.org" target="_blank" rel="noopener noreferrer">
+          Visit the World Wildlife Fund
+        </a>
+        to learn how you can help protect endangered species today.
+      </p>
+    </aside>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Save Our Wildlife Campaign. All rights reserved.</p>
+  </footer>
+
+  <!-- Linked JavaScript (separation of content) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
